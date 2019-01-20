@@ -38,9 +38,9 @@ disaster relief could be streamlined considerably in order to more effectively h
 	1. **Data**:
 	
 		1. *process_data.py*: Python script for an ETL pipeline that stores the cleaned data in a local SQLite database.
-    		2. *DisasterResponseData.db*: SQLite database containing clean data.
-   		3. *disaster_categories.csv*: Comma-separated file with information on the labels associated with each message.
-    		4. *disaster_messages.csv*: Comma-separated file containing the raw messages.
+		2. *DisasterResponseData.db*: SQLite database containing clean data.
+		3. *disaster_categories.csv*: Comma-separated file with information on the labels associated with each message.
+		4. *disaster_messages.csv*: Comma-separated file containing the raw messages.
 		
 	2. **Models**: 
 	
