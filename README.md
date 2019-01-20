@@ -38,9 +38,9 @@ disaster relief could be streamlined considerably in order to more effectively h
 	1. **Data**:
 	
 		1. *process_data.py*: Python script for an ETL pipeline that stores the cleaned data in a local SQLite database.
-    2. *DisasterResponseData.db*: SQLite database containing clean data.
-    3. *disaster_categories.csv*: Comma-separated file with information on the labels associated with each message.
-    4. *disaster_messages.csv*: Comma-separated file containing the raw messages.
+    		2. *DisasterResponseData.db*: SQLite database containing clean data.
+   		3. *disaster_categories.csv*: Comma-separated file with information on the labels associated with each message.
+    		4. *disaster_messages.csv*: Comma-separated file containing the raw messages.
 		
 	2. **Models**: 
 	
@@ -50,17 +50,17 @@ disaster relief could be streamlined considerably in order to more effectively h
 	3. **App**:
 	
 		1. *run.py*: Python script for launching the Flask web app containing the message classifier and other data visualizations. 
-    2. *templates*:
-      2.1. *master.html*: HTML markup for the landing page of the web app.
-      2.2. *go.html*: HTML markup containing div to show message classification results. 
+		2. *templates*:
+			1. *master.html*: HTML markup for the landing page of the web app.
+			2. *go.html*: HTML markup containing div to show message classification results. 
 
 
 4. **Instructions**
 
 To interact with the project, clone the Repo and execute
-'''
+```python
 python3 run.py
-'''
+```
 from within the 'app' folder in your terminal. The link to the web app will then appear. 
 
 
