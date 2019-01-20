@@ -92,14 +92,16 @@ def clean_data(df):
     # Drop duplicates
     df = df.drop_duplicates()
     
-    # Drop NaNs
-    df = df.dropna(how='any', axis=0)
+    # Drop NaNs from all columns except 'Original', because 
+    # it has 16k NaNs for messages that were originally in
+    # English, and therefore did not have to be traduced
+    to_drop = np.delete(df.columns.values, 
+                        np.argwhere(df.columns.values == 'Original'))
+    df = df.dropna(how='any', subset=to_drop, axis=0)
     
     return df
     
     
-
-
 def save_data(df, database_filename):
     '''
     Saves data to local SQLite database using a connection through an

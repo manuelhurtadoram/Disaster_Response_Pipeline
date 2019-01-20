@@ -105,9 +105,7 @@ def build_model():
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer(smooth_idf=True)),
-        ('clf', MultiOutputClassifier(RandomForestClassifier(n_jobs=-1, 
-                                                             random_state=42), 
-                                      n_jobs=-1))
+        ('clf', MultiOutputClassifier(RandomForestClassifier(random_state=42)))
     ])
     
     # Set parameters to tune
@@ -188,7 +186,7 @@ def main():
         model.fit(X_train, y_train)
         
         print('Evaluating model...')
-        evaluate_model(model, X_test, y_test, category_names)
+        #evaluate_model(model, X_test, y_test, category_names)
 
         print('Saving model...\n    MODEL: {}'.format(model_filepath))
         save_model(model, model_filepath)
