@@ -1,1 +1,0 @@
-web gunicorn Disaster_Response_Pipeline:app
